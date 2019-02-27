@@ -74,8 +74,8 @@ var game = {
                     nextLevel: "mining"
                 },
                 {
-                    text: "make sword",
-                    nextLevel: "kill pig"
+                    text: "make sword and slay pig",
+                    nextLevel: "kill_pig"
                 }
                 ]
         },
@@ -83,8 +83,8 @@ var game = {
             message: "you find cave / mine stone and coal",
             choices: [
                 {
-                    text: "make furnace",
-                    nextLevel: "wood"
+                    text: "make better pickaxe",
+                    nextLevel: "iron"
                 },
                 {
                     text: "make torches",
@@ -95,8 +95,38 @@ var game = {
                     nextLevel: "creeper"
                 }
                 ]
-        }
-        
+        },
+        kill_pig: {
+            message: "lightning strikes the pig as you hit it. The pigman kills you",
+            choices: [
+                {
+                text: "game over",
+                nextLevel: "you_lose"
+                }
+            ]
+        },
+        creeper: {
+            message: "lightning strikes the creeper and charges it. The charged creeper explodes in your face",
+            choices: [
+                {
+                text: "game over",
+                nextLevel: "you_lose"
+                }
+            ]
+        },
+        iron : {
+            message: "you make an iron pickaxe",
+            choice: [
+                {
+                text: "",
+                nextLevel: ""
+                },
+                {
+                text: "",
+                nextLevel: ""
+                }
+            ]
+        },
         
         
         
@@ -141,10 +171,13 @@ var game = {
         
         you_lose: {
             message: "you lose!",
-            choices: {
+            choices: [
+                {
                 text: "start_over",
                 nextLevel: "start"
+                }
+                ]
             }
         }
-    }
-};
+    };
+
