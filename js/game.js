@@ -116,59 +116,35 @@ var game = {
         },
         iron : {
             message: "you make an iron pickaxe",
-            choice: [
+            choices: [
                 {
-                text: "",
-                nextLevel: ""
+                text: "continue mining",
+                nextLevel: "win"
                 },
                 {
-                text: "",
-                nextLevel: ""
+                text: "go back to surface",
+                nextLevel: "lightning"
                 }
             ]
         },
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        lightning : {
+            message: "you get struck by lightning and die",
+            choices: [
+                {
+                text: "game over",
+                nextLevel: "you_lose"
+                }
+            ]
+        },
+        win : {
+            message: "your computer gets struck by lightning and you lose all your progress. At least you get the satisfaction of mining diamond",
+            choices: [
+                {
+                text: "start_over",
+                nextLevel: "start"
+                }
+            ]
+        },
         you_lose: {
             message: "you lose!",
             choices: [
